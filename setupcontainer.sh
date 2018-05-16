@@ -14,6 +14,8 @@ systemctl enable sshd
 systemctl enable xrdp
 systemctl disable kdump
 
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 rm /etc/localtime
 (cd /etc; ln -s /usr/share/zoneinfo/Japan  localtime)
 
@@ -21,7 +23,7 @@ rm -f /etc/xdg/autostart/xfce-polkit.desktop
 echo '%wheel        ALL=(ALL)       NOPASSWD: ALL' >> /etc/sudoers
 
 cat <<EOF > /etc/locale.conf
-LANG=ja_JP.UTF-8
+LANG=en_US.UTF-8
 EOF
 
 cat <<EOF > /etc/supervisord.d/xrdp.ini

@@ -6,7 +6,7 @@ RUN yum groupinstall -y "Minimal Install"
 RUN yum install -y epel-release
 RUN yum groupinstall -y "Xfce"
 RUN yum groupinstall -y "Development Tools"
-RUN yum install -y R firefox bwa samtools xrdp tigervnc-server vlgothic-fonts ipa-mincho-fonts ipa-gothic-fonts ipa-pmincho-fonts ipa-pgothic-fonts net-tools zsh libevent ibus-kkc file bind-utils vcftools bedtools supervisor vlgothic-p-fonts libxml2 mock gcc rpm-build rpm-devel rpmlint make python bash coreutils diffutils patch rpmdevtools
+RUN yum install -y R firefox bwa samtools xrdp tigervnc-server vlgothic-fonts ipa-mincho-fonts ipa-gothic-fonts ipa-pmincho-fonts ipa-pgothic-fonts net-tools zsh libevent ibus-kkc file bind-utils vcftools bedtools supervisor vlgothic-p-fonts libxml2 mock gcc rpm-build rpm-devel rpmlint make python bash coreutils diffutils patch rpmdevtools traceroute
 RUN yum -y reinstall glibc-common
 #RUN localedef -v -c -i ja_JP -f UTF-8 ja_JP.UTF-8; echo "";
 RUN yum remove -y NetworkManager ctags
